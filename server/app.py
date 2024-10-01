@@ -27,9 +27,15 @@ def math(num1, operation, num2):
     elif operation == "*":
         return str(num1 * num2)
     elif operation == "div":
-        return str(num1 / num2)
+        if num2 == 0:
+            return "Dividing a number by zero is not allowed."
+        else:
+            return str(num1 / num2)
     elif operation == "%":
-        return str(num1 % num2)
+        if num2 == 0:
+            return "Computing the modulus of a number by zero is not allowed."
+        else:
+            return str(num1 % num2)
     
 
 if __name__ == '__main__':
